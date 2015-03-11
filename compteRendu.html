@@ -902,5 +902,51 @@ Exemple :</p>
 <pre><code>' or '1' = '1
 </code></pre>
 
-<p>comme paramètre userName et password en POST</p>
+<p>comme paramètre $usr et $psw en POST</p>
+
+<p>La fonction escape() permet de limiter ces attaques.</p>
+
+<h1>
+<a id="user-content-41" class="anchor" href="#41" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.1</h1>
+
+<p>Les fonctions anonymes permettent la création de fonctions sans préciser leur nom</p>
+
+<p>par exemple :</p>
+
+<pre><code>function (echo 2+2);
+</code></pre>
+
+<p>ou</p>
+
+<pre><code>function (echo "hello"." "."world");
+</code></pre>
+
+<p>Affichera 4 ou hello world mais ne pourra pas être appelée par la suite.</p>
+
+<h1>
+<a id="user-content-42" class="anchor" href="#42" aria-hidden="true"><span class="octicon octicon-link"></span></a>4.2</h1>
+
+<p>Il existe :</p>
+
+<ul>
+<li>  slim framework, le plus populaire et permet la POO.</li>
+<li>  Flight, supporte les requests/reponses JSON.</li>
+<li>  Popcorn framework est le plus léger, il fait 39kb.</li>
+</ul>
+
+<h1>
+<a id="user-content-51" class="anchor" href="#51" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.1</h1>
+
+<p>Doctrine est un hébergeur de librairies php notement DBAL que nous utilisont pour le TP</p>
+
+<h1>
+<a id="user-content-61" class="anchor" href="#61" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.1</h1>
+
+<p>L'instruction article.title correspond à :</p>
+
+<pre><code>&lt;?php echo $article-&gt;getTitle() ?&gt;
+</code></pre>
+
+<p>Twig converti automatiquement ce type de syntaxe en chaines de caractères.
+Comme ecrit dans la documantation, le point permet d'acceder aux attributs d'une variable.</p>
 </div></article></body></html>
