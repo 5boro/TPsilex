@@ -1,0 +1,49 @@
+#Mise en oeuvre d'un framework MVC pour PHP
+##1.1
+<article></article> est une balise HTML5 qui permet de sectionner le contenu et créer des sous parties de code, a la manière de <div> ou <span>
+#1.2
+PDO est une classe PHP qui permet l'acces à une base de données MySQL, elle est une alterntive moderne orientée objet et plus sécuritaire au connecteur mysql de base.
+#2.1
+La balise est omise car elle permet d'éviter les problèmes d'inclusion de fichiers
+#3.1
+On inclu le fichier vendor/autoload.php pour pouvoir utiliser tous les éléments PHP définis dans les sous-répertoires de vendor.
+#3.2
+Une injection consiste à injecter des données dans une application, dans le cas d'une requête SQL par exemple placer une "'" dans un paramètre en POST peut fermer la requête et permettre d'insérer une autre requête à la suite.
+Exemple :
+
+	"SELECT * FROM users WHERE userName='$usr' AND password='$psw' "
+peut devenir :
+
+	"SELECT * FROM users WHERE userName='' OR '1' = '1' AND password='' OR '1' = '1' "
+si on place :
+
+	' or '1' = '1
+comme paramètre $usr et $psw en POST
+
+La fonction escape() permet de limiter ces attaques.
+#4.1
+Les fonctions anonymes permettent la création de fonctions sans préciser leur nom
+
+par exemple :
+
+	function (echo 2+2);
+ou
+
+	function (echo "hello"." "."world");
+Affichera 4 ou hello world mais ne pourra pas être appelée par la suite.
+
+#4.2
+Il existe :
+*	slim framework, le plus populaire et permet la POO.
+*	Flight, supporte les requests/reponses JSON.
+*	Popcorn framework est le plus léger, il fait 39kb.
+
+#5.1
+Doctrine est un hébergeur de librairies php notement DBAL que nous utilisont pour le TP
+
+#6.1
+L'instruction article.title correspond à :
+
+	<?php echo $article->getTitle() ?>
+Twig converti automatiquement ce type de syntaxe en chaines de caractères.
+Comme ecrit dans la documantation, le point permet d'acceder aux attributs d'une variable.

@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	"settings": {
+		"xdebug": {
+			"url": "http://local.dev/TPsilex/",
+			"path_mapping": {"/var/www/local.dev/TPsilex/" : "/home/bastien/code/TPsilex/"}
+		}
+	}
+}
